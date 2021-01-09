@@ -1,0 +1,24 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Enter Data" icon-name="standard:lead">
+        <div class="slds-m-around_large">
+
+            <lightning-input  label="First Name" value={firstname} onchange={handleChange} ></lightning-input>
+            <lightning-input  label="Last Name" value={lastname} onchange={handleChange1} ></lightning-input>
+            <lightning-input  label="Email Id" value={email} onchange={handleChange2} ></lightning-input>
+            <lightning-button variant="success" label="Submit" title="titleName" onclick={handleClick}></lightning-button>
+        
+        </div>
+        
+    </lightning-card>
+    <lightning-card  variant="Narrow"  title="User Info" icon-name="standard:lead">
+        <div class="slds-m-around_large"> 
+            <div if:false={ready} class="slds-m-around_large" >Loding----- </div>
+            <div if:true={ready} class="slds-m-around_large" >
+                <p>First Name : {firstname}</p>  
+                <p>Last Name : {lastname}</p>  
+                <p>Email Id : {email}</p> 
+            </div>
+        </div>
+    </lightning-card>
+    
+</template>
