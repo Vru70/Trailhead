@@ -1,0 +1,16 @@
+<template >
+   <div id="wating" if:false={ready}>Loding.......</div>
+    <div id="display" if:true={ready}>
+        <div>Name: {name} </div>
+        <div>Age: {age} </div>
+        <div>Role: {role} </div>
+        <div>Company: {company} </div>
+        <div>Email: {email} </div>
+        <div> <img src={picUrl} alt="User Image"></div>
+    </div>
+
+    <div>
+        <c-bike bike={bike1}></c-bike>
+    </div>
+
+</template>  
