@@ -1,0 +1,17 @@
+<template>
+    <lightning-card  title="Iterator Example" icon-name="custom:custom10">
+       <ul class="slds-m-around_medium">
+        <template iterator:itn={contacts}>
+            <li key={itn.value.Id}>
+                <div class="slds-box">
+                    <div if:true={itn.first} class="list-first"></div>
+                   {itn.value.Name}, {itn.value.Title}
+                <div if:true={itn.last} class="list-last"></div>
+                </div>
+
+            </li>
+        </template>
+       </ul>
+        
+    </lightning-card>
+</template>
