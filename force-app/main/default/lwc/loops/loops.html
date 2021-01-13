@@ -1,0 +1,27 @@
+<template>
+    <lightning-card  title="CEO of Company" icon-name="custom:custom14">
+        <div>
+            <template if:true={areDetailsVisible} for:each={ceoList} for:item="ceo" >
+                <div key={ceo.Id} class="slds-box">
+                     
+                    <div class="slds-box slds-theme_shade slds-theme_alert-texture">
+                        <p>{ceo.Name} is a 
+                          <strong> CEO</strong> of 
+                          <a href={ceo.link}> {ceo.Company}</a>.</p>
+                      </div>
+                </div>
+                
+            </template>
+            
+            <div class="btn1 slds-clearfix" > 
+                <div class=" slds-float_left">
+                    <button class="slds-button slds-button_success" onclick={chnageTrue}>Show List</button>
+                </div>
+                <div class=" slds-float_right">
+                  <button class="slds-button slds-button_text-destructive" onclick={chnageFalse}>Hide List</button>
+                </div>
+            </div>
+                     
+        </div>
+    </lightning-card>
+</template>
