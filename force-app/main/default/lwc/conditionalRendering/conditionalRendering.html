@@ -1,0 +1,32 @@
+<template>
+    <div>
+        <template if:true={isTimon}>
+
+            <img src="https://i.dlpng.com/static/png/222274_preview.png"
+            width="300"
+            height="300"
+            />
+        </template>
+    </div>
+
+    <div>
+        <template if:true={isPumba}>
+
+            <img src="https://i.dlpng.com/static/png/26298_preview.png"
+            width="300"
+            height="300"
+            />
+        </template>
+    </div>
+    <div class="slds-m-around_small">
+ 
+        <lightning-button label="Show Timon" 
+            onclick={showTimon} 
+        ></lightning-button>
+ 
+        <lightning-button label="Show Pumba" 
+            onclick={showPumba} 
+        ></lightning-button>
+ 
+    </div>
+</template>
