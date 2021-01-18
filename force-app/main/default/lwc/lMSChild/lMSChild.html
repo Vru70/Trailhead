@@ -1,0 +1,35 @@
+<template>
+    <div class="slds-is-relative slds-text-body_small tds-color_meteorite tds-content-tile" style="border-top-color: rgb(10, 157, 219);">
+        <div class="slds-p-around_large">
+            <lightning-card title={cource.name} >
+                <img src={cource.img} alt="Admin Image" class="slds-align_absolute-center" >
+                <br/>
+                <ul class="slds-p-horizontal_small slds-text-heading_small" style="margin-bottom: .4rem;">
+                    <li>Cource Fees : <strong style="color: green; font-size: large;">{cource.fees} </strong> </li>
+                    <li>Coutce Duration : <strong>{cource.duration} </strong> </li>
+                    <li>Cource Author : {cource.trainer}</li>
+                    <li>
+                        <lightning-button variant="brand" label="Enroll Now!" title="Primary action" 
+                        onclick={handleClick} class="slds-m-left_x-medium"></lightning-button>
+                        &nbsp;
+                        <lightning-button variant="success" label="Watch Demo" title="Primary action" 
+                        onclick={handleClick} class="slds-m-left_x-medium"></lightning-button>
+                    </li>
+                </ul>
+               
+                
+                
+                <p slot="footer">
+                    <lightning-icon icon-name="custom:custom11" size="small"> </lightning-icon> &nbsp;
+                    <lightning-icon icon-name="custom:custom11" size="small"> </lightning-icon> &nbsp;
+                    <lightning-icon icon-name="custom:custom11" size="small"> </lightning-icon> &nbsp;
+                    <lightning-icon icon-name="custom:custom11" size="small"> </lightning-icon> &nbsp;
+                   
+                </p>
+            </lightning-card>
+        </div>
+        
+    </div>
+    
+    
+</template>
