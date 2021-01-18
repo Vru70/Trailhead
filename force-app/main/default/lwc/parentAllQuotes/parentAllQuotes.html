@@ -1,9 +1,9 @@
 <template>
     <lightning-card  variant="Narrow"  title="Parent Quotes Component" icon-name="custom:custom1">
        <ul>
-           <template for:each={quotes} for:item="q" >
-              <li key={q.Id} style="padding: 10px">
-                <c-child-quotes quotes={q}> </c-child-quotes>
+           <template for:each={quoteList} for:item="qu" >
+              <li key={qu.Id} style="padding: 10px">
+                <c-child-quotes child-quote={qu}> </c-child-quotes>
               </li>
            </template>
         </ul>

@@ -2,7 +2,7 @@ import { LightningElement } from 'lwc';
 
 export default class ParentAllQuotes extends LightningElement 
 {
-    quotes = 
+    quoteList = 
     [
         {
             Id: 1,
