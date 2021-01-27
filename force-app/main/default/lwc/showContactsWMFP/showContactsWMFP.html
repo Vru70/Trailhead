@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Apex Wire Method With Function Parameters">            
+        <lightning-layout>
+          <lightning-layout-item flexibility="auto" padding="around-small">
+                <lightning-input label="Enter Account Name" type="search"  onchange={searchContact} value={searchKey}></lightning-input>
+                    <br/>
+                    <template if:true={contacts}>                        
+                        <template for:each={contacts} for:item="contact">                        
+                            <ul key={contact.Id}>                               
+                               <p>{contact.Name}</p>
+                               <p>{contact.Email}</p>
+                               
+                            </ul>
+                            
+                        </template>
+                    </template>
+                    <template if:true={error}>
+                        {error}
+                    </template>                    
+          </lightning-layout-item>
+        </lightning-layout>
+      </lightning-card>
+</template>
