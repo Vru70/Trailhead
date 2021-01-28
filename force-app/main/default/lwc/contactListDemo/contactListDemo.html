@@ -17,5 +17,23 @@
                 </template>
             </lightning-layout-item>
         </lightning-layout>
+        <lightning-layout vertical-align="center"> 
+            <lightning-layout-item flexibility="auto" padding="arround-small">
+                <lightning-input-name value={searchKeyA}
+                    label="Enter Account Name">
+                </lightning-input-name>
+                <br />
+                <lightning-button variant="success" label="Search Account"
+                 title="Search Account" onclick={getAccOnBtn}>
+                </lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <template  for:each={accounts} for:item="acc">
+                   <li key={accounts.Id}>
+                        {accounts.Name} &nbsp; &nbsp; {accounts.Industry}&nbsp; &nbsp; <br />
+                   </li>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
     </lightning-card>
 </template>

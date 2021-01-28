@@ -16,9 +16,12 @@ public with sharing class ContactAuraService
     {
         try 
         {
-            String key = '%'+ name + '%';
-            String query = 'Select Id, Name, Industry from Account Where Name LIKE : key';
-            return Database.query(query);
+            if(String.isBlank(name))
+            {
+                return new list<Account>();
+            }
+            String key = '%'+ name + '%';           
+            return  [Select Id, Name, Industry from Account Where Name LIKE : key];
 
         } catch (Exception e) 
         {
