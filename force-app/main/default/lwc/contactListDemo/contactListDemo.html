@@ -1,15 +1,14 @@
 <template>
-    <lightning-card    title="Contact List" icon-name="standard:contact">
+    <lightning-card title="Contact List" icon-name="standard:contact">
         <lightning-layout>
             <lightning-layout-item flexibility="auto" padding="around-small">
-                <lightning-input label="Enter Account Name" type="search"  
+                <lightning-input label="Enter Contact Name" type="search"  
                 onchange={searchContact} value={searchKey}></lightning-input>
                 <br />
                 
-                <template if:true={contacts} for:each={contacts} for:item="con" >
+                <template if:true={contacts} for:each={contacts} for:item="con" for:index="i" >
                    <li key={con.Id}>
-                        {con.Name} <br>
-                        {con.Email}
+                    {i}&nbsp; &nbsp;{con.Name}&nbsp; &nbsp;{con.Email}&nbsp; &nbsp; <br />
                    </li>
                 </template>
                 <template if:true={error}>
@@ -19,18 +18,18 @@
         </lightning-layout>
         <lightning-layout vertical-align="center"> 
             <lightning-layout-item flexibility="auto" padding="arround-small">
-                <lightning-input-name value={searchKeyA}
-                    label="Enter Account Name">
-                </lightning-input-name>
+                <lightning-input label="Enter Account Name" type="search"  onchange={searchAcc} 
+                 value={searchKeyA}></lightning-input>
+                <br />
                 <br />
                 <lightning-button variant="success" label="Search Account"
                  title="Search Account" onclick={getAccOnBtn}>
                 </lightning-button>
-            </lightning-layout-item>
-            <lightning-layout-item>
-                <template  for:each={accounts} for:item="acc">
-                   <li key={accounts.Id}>
-                        {accounts.Name} &nbsp; &nbsp; {accounts.Industry}&nbsp; &nbsp; <br />
+                <br />
+                <br />
+                <template  for:each={accounts} for:item="acc" for:index="q">
+                   <li key={acc.Id}>
+                      {q}&nbsp; &nbsp;{acc.Name}&nbsp; &nbsp;{acc.Industry}&nbsp; &nbsp;<br />
                    </li>
                 </template>
             </lightning-layout-item>
