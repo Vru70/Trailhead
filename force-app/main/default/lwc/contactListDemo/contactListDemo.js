@@ -22,6 +22,7 @@ export default class ContactListDemo extends LightningElement
     }
     searchAcc(event)
     {        
+        event.preventDefault();
         this.searchKeyA = event.target.value;        
     }
 
@@ -54,7 +55,7 @@ export default class ContactListDemo extends LightningElement
         .then(result =>{
                 this.accounts = result;
                 /* eslint-disable-next-line no-console */
-                console.log('Account Result '+ JSON.stringify(result) );
+                console.log('Account Result '+ JSON.stringify(this.accounts) );
         })
         .catch(error =>{
                 this.accountError  = error;
