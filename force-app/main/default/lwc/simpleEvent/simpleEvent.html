@@ -1,3 +1,9 @@
 <template>
-    
+    <!-- Parent  -->
+
+    <c-paginator onnext={handleNext} onprevious={handlePrevious} ></c-paginator>
+
+    <template if:true={page}>
+<h1> Current page No. :  {page}</h1>
+    </template>
 </template>
