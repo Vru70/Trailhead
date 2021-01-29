@@ -1,0 +1,25 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Account Detail" icon-name="standard:account">
+                <lightning-layout multiple-rows vertical-align="center">
+            <lightning-layout-item size="12" padding="around-small" >
+                <lightning-input label="Find Account" value={searchKey} onchange={handleChnage}>    
+                </lightning-input>
+                <lightning-button variant="brand" label="Search"  onclick={getAccOnBtn}>    
+                </lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-small" >
+                <template for:each={accountList} for:item="acc" >
+                   <c-account-tile key={acc.Id} onselect={handleSelectRec} account={acc}></c-account-tile>
+                </template>
+            </lightning-layout-item>            
+                <lightning-layout multiple-rows>
+                    <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3" >
+                        <template if:true={selectAccount}>
+                            {selectAccount.Name}
+                            {selectAccount.Industry}
+                        </template>
+                    </lightning-layout-item>
+                </lightning-layout>
+         </lightning-layout> 
+    </lightning-card>
+</template>
