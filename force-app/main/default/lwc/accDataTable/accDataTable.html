@@ -1,11 +1,14 @@
 <template>
-        <lightning-datatable
-                data={acc.data}
-                columns={columns}
-                key-field="id"
-                hide-checkbox-column
-                show-row-number-column
-               >
-        </lightning-datatable>
-        
+    <template if:true={accList}>
+        <lightning-datatable 
+        key-field="Id"
+        data={accList}
+        columns={columns}
+       >
+    </lightning-datatable>
+    </template>
+    <template if:true={error}>
+        {error}
+    </template>
+    
 </template>

@@ -1,15 +1,38 @@
-import {  LightningElement, track, wire } from 'lwc';
-import accList from '@salesforce/apex/accountList.accList';
-const columns = [
-    {label: 'Name', fieldName: 'Name', type: 'text'},
-    {label: 'Account ID', fieldName: 'Id',  type: 'text'},
-    {label: 'Currency', fieldName: 'AnnualRevenue',  type: 'currency'}
-];
+import { LightningElement, track, wire } from 'lwc';
+import dataList from '@salesforce/apex/accountList.allAccList';
+
 export default class AccDataTable extends LightningElement 
 {
-    error;
-    columns = columns;
-
-     @wire(accList)
-    acc;
+    @track columns = [{
+        label: 'Account name',
+        fieldName: 'Name',
+        type: 'text',
+        sortable: true
+    },
+    {
+        label: 'Account Number',
+        fieldName: 'AccountNumber',
+        type: 'text',
+        sortable: true
+    },
+    {
+        label: 'Billing Address',
+        fieldName: 'BillingAddress',
+        type: 'text',
+        
+    },
+    ];
+    @track error;
+    @track accList;
+    @wire (dataList)
+    wiredAccounts({error,data})
+    {
+        if(data)
+        {
+            this.accList = data; 
+        } else if(error)
+        {
+            this.error = error;
+        }
+    }
 }
