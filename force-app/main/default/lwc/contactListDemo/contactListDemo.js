@@ -22,7 +22,6 @@ export default class ContactListDemo extends LightningElement
     }
     searchAcc(event)
     {        
-        event.preventDefault();
         this.searchKeyA = event.target.value;        
     }
 

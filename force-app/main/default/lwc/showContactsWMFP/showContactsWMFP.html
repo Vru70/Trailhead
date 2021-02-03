@@ -6,16 +6,13 @@
                     <br/>
                     <template if:true={contacts}>                        
                         <template for:each={contacts} for:item="contact">                        
-                            <ul key={contact.Id}>                               
-                               <p>{contact.Name}</p>
-                               <p>{contact.Email}</p>
-                               
-                            </ul>
-                            
+                            <p key={contact.Id}>                               
+                                {contact.Name}
+                            </p>
                         </template>
                     </template>
                     <template if:true={error}>
-                        {error}
+                        {error}>
                     </template>                    
           </lightning-layout-item>
         </lightning-layout>

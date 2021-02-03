@@ -1,9 +1,7 @@
 import { LightningElement } from 'lwc';
-import Id from '@salesforce/user/Id';
 
 export default class PPage extends LightningElement 
 {
-    userId = Id;
     clist =[
         {
             name:'Salesforce Lightning Administrator',
