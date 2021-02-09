@@ -1,0 +1,23 @@
+<apex:page standardController="Account">
+    <apex:pageBlock title="Account Status">
+        <apex:pageBlockSection columns="1">
+            
+            <p>             
+               Name : {! Account.Name} <br/>
+            </p>
+            <p>             
+               ID : {! Account.ID} <br/>
+            </p>
+            <p>             
+               Owner : {! Account.Owner.Name} <br/>
+            </p>
+            <p>             
+               Owner : {! Account.Phone} <br/>
+            </p>
+            <p>             
+               Owner : {! Account.Type} <br/>
+            </p>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+</apex:page>
