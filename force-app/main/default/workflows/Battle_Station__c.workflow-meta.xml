@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <tasks>
+        <fullName>test</fullName>
+        <assignedTo>vru@emp-fox.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Battle_Station__c.CreatedDate</offsetFromField>
+        <priority>Low</priority>
+        <protected>false</protected>
+        <status>In Progress</status>
+        <subject>test</subject>
+    </tasks>
+</Workflow>
