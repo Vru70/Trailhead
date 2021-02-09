@@ -1,0 +1,13 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Account Information" icon-name="standard:account">
+        <div class="slds-p-arround_small">
+            <lightning-record-form 
+                record-id={recordId}
+                object-api-name={objectApiName}
+                layout-type="Compact"
+                columns="2"
+                mode="readonly">
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>
