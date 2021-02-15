@@ -3,9 +3,15 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
-    <label>LightningInstrumentation</label>
+    <label>Lightning Scheduler Setup</label>
     <navType>Standard</navType>
-    <tabs>standard-LightningInstrumentation</tabs>
+    <tabs>standard-LightningSchedulerSetupAssistant</tabs>
+    <tabs>standard-ServiceTerritory</tabs>
+    <tabs>standard-ServiceResource</tabs>
+    <tabs>standard-WorkTypeGroup</tabs>
+    <tabs>standard-WorkType</tabs>
+    <tabs>standard-OperatingHours</tabs>
+    <tabs>standard-ServiceAppointment</tabs>
     <tabs>Consultant__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>
