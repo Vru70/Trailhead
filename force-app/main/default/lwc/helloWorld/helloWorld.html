@@ -1,16 +1,19 @@
-<template >
-   <div id="wating" if:false={ready}>Loding.......</div>
-    <div id="display" if:true={ready}>
-        <div>Name: {name} </div>
-        <div>Age: {age} </div>
-        <div>Role: {role} </div>
-        <div>Company: {company} </div>
-        <div>Email: {email} </div>
-        <div> <img src={picUrl} alt="User Image"></div>
+<template>
+  <lightning-card title="Calculator" icon-name="custom:custom10">
+    <div class="slds-m-around_medium">
+      <lightning-input label="val1" value={val1} onchange={changeHandler}></lightning-input>
     </div>
-
+    <div class="slds-m-around_medium">
+        <lightning-input label="val2" value={val2} onchange={changeHandler1}></lightning-input>
+    </div>
+    <div class="slds-m-around_medium">
+      <lightning-input label="Result" value={val3}></lightning-input>
+  </div>
     <div>
-        <c-bike bike={bike1}></c-bike>
+      <button class="slds-button slds-button_brand" name="add" onclick={onAdd}>ADD</button>
+      <button class="slds-button slds-button_brand" name="sub" onclick={onSub}>SUB</button>
+      <button class="slds-button slds-button_brand" name="multi" onclick={onMulti}>MULTI</button>
+      <button class="slds-button slds-button_brand" name="divd" onclick={onDivd}>DIVD</button>
     </div>
-
-</template>  
+  </lightning-card>
+</template>
