@@ -2,11 +2,11 @@
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseValues>
         <plural>false</plural>
-        <value>Candidate</value>
+        <value>Service Contract</value>
     </caseValues>
     <caseValues>
         <plural>true</plural>
-        <value>Candidates</value>
+        <value>Service Contracts</value>
     </caseValues>
     <startsWith>Consonant</startsWith>
 </CustomObjectTranslation>
